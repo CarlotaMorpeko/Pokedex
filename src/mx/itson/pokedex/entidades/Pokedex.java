@@ -26,7 +26,7 @@ public class Pokedex {
             System.out.println("No tiene pokémons registrados en su pokédex.");       
         } else{
             for (Pokemon pokemon : pokemons) {
-                System.out.println("\n--- Pokédex ---");
+                System.out.println("\n--- Pokedex ---");
                 pokemon.mostrarInformacion();
                 System.out.println("-------------------");
             }

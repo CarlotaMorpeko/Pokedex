@@ -59,7 +59,7 @@ public class Entrenador {
    public void mostrarEntrenador(){
         System.out.println("Entrenador: " + nombre);
         System.out.println("Edad: " + edad);
-        System.out.println("Número de Pokémon registrados: " + pokedex.pokemonRegistrados());
+        System.out.println("Numero de Pokémon registrados: " + pokedex.pokemonRegistrados());
     }
    
 }

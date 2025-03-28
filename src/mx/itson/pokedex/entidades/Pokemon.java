@@ -75,7 +75,7 @@ public class Pokemon {
     private Shiny variocolor;
         
     public void mostrarInformacion() {
-        System.out.println("Pokémon: " + nombre);
+        System.out.println("Pokemon: " + nombre);
         System.out.println("Nivel: " + nivel);
         System.out.println("Tipo: " + tipo);
     }

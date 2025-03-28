@@ -63,21 +63,25 @@ public class IniciarPrograma {
         System.out.print("Ingrese el nombre del Pokemon: ");
         String nombre = scanner.nextLine();
         
-        System.out.print("Ingrese el nivel del Pokemon: ");
+        System.out.print("Ingrese el nivel del Pokemon (1-100): ");
         int nivel = scanner.nextInt();
         scanner.nextLine();
+        
+        if(nivel < 1 || nivel > 100){
+            System.out.println("¡Nivel invilido! El nivel debe estar entre 1 y 100.");
+        }else{
+            System.out.print("Ingrese solo el primero tipo del Pokemon (Electrico, Fuego, Agua, Planta, volador): ");
+            String tipoElem = scanner.nextLine().toUpperCase();
 
-        System.out.print("Ingrese solo el primero tipo del Pokemon (Electrico, Fuego, Agua, Planta, volador): ");
-        String tipoElem = scanner.nextLine().toUpperCase();
+            TipoPokemon tipo = TipoPokemon.valueOf(tipoElem);
 
-        TipoPokemon tipo = TipoPokemon.valueOf(tipoElem);
+            Pokemon pokemon = new Pokemon();
+            pokemon.setNombre(nombre);
+            pokemon.setNivel(nivel);
+            pokemon.setTipo(tipo);
 
-        Pokemon pokemon = new Pokemon();
-        pokemon.setNombre(nombre);
-        pokemon.setNivel(nivel);
-        pokemon.setTipo(tipo);
-
-        pokedex.agregarPokemon(pokemon);
+            pokedex.agregarPokemon(pokemon);
+        }
     }
     public void registrarEntrenador(){
         System.out.print("Ingrese tu nombre: ");
